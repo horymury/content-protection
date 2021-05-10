@@ -11,6 +11,11 @@ function createWindow () {
       preload: path.join(__dirname, 'preload.js')
     }
   })
+  mainWindow.setContentProtection(true)
+
+  setTimeout(() => mainWindow.hide(), 5000)
+
+  setTimeout(() => mainWindow.show(), 8000)
 
   // and load the index.html of the app.
   mainWindow.loadFile('index.html')
